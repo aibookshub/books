@@ -115,15 +115,16 @@ const styles = StyleSheet.create({
     galleryGrid: {
         justifyContent: 'space-between',
         paddingBottom: 20,
+        paddingTop: 2,
     },
     galleryItemContainer: {
         alignItems: 'center',
-        width: '48%',
+        width: '50%',
         aspectRatio: 9 / 16,
         marginBottom: 10,
     },
     galleryItemImage: {
-        height: '90%',
+        height: '88%',
         width: '100%',
         aspectRatio: 10 / 16,
         borderRadius: 8,
