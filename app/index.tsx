@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import YccGallery  from '@/components/D1_YccGallery';
+import HomePage  from '@/components/D1_Home';
 import LocalGallery  from '@/components/D2_LocalGallery';
 import RateTheApp from '@/components/D5_Rate5Star';
 import 'expo-dev-client';
@@ -18,9 +18,9 @@ export default function MainPage() {
                 },
             }}
         >
-            <Drawer.Screen name="YccGallery"   component={YccGallery}   options={{ title: 'Asian Beauty Yome Sugar' }} />
-            <Drawer.Screen name="LocalGallery" component={LocalGallery}   options={{ title: 'My Local Gallery' }} />
-            <Drawer.Screen name="Rate"         component={RateTheApp}  options={{ title: '5 s tar!' }} />
+            <Drawer.Screen name="HomePage"   component={HomePage}   options={{ title: 'Online Books Hub' }} />
+            <Drawer.Screen name="LocalGallery" component={LocalGallery} options={{ title: 'My Local Gallery' }} />
+            <Drawer.Screen name="Rate"         component={RateTheApp}   options={{ title: '5 star!' }} />
         </Drawer.Navigator>
     );
 }
