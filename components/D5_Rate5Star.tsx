@@ -1,3 +1,5 @@
+// trustAllCerts={false}
+
 import {View, StatusBar, SafeAreaView, useWindowDimensions } from "react-native";
 import PDF from "react-native-pdf";
 import 'expo-dev-client';
