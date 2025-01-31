@@ -28,7 +28,7 @@ async function fetchYccCategoryCover(): Promise<YccCategory[]> {
             { id: "8", title: "professional Yome", cover: srcArray[7] }
         ];
 
-        console.log('YccCat (from fetch):', YccCat);
+        // console.log('YccCat (from fetch):', YccCat);
         return YccCat; // Return the populated array
     } catch (error) {
         console.error('Error fetching category covers:', error);
