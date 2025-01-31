@@ -149,6 +149,14 @@ const styles = StyleSheet.create({
         color: 'red',
         fontSize: 18,
     },
+    divider: {
+        height: 1, backgroundColor: "#ccc", marginVertical: 10
+    },
+    sectionTitle: {
+        fontSize: 16,
+        fontWeight: "bold",
+        marginLeft: 20, marginTop: 10, color: "#555"
+    },
 
 });
 
