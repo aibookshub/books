@@ -1,12 +1,27 @@
-import React from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RouteProp } from "@react-navigation/native";
+import { View, Text, FlatList, TouchableOpacity, StyleSheet } from "react-native";
+import styles from '@/src/styles/bookstyles';
+
+// Define the stack navigation type
+type RootStackParamList = {
+  Home: undefined;
+  Category: { categoryId: string; categoryName: string };
+};
+
+// Define props for the HomeScreen
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, "Home">;
+
+type Props = {
+  navigation: HomeScreenNavigationProp;
+};
 
 const categories = [
-  { id: '1', name: 'Fiction' },
-  { id: '2', name: 'Non-Fiction' },
+  { id: "1", name: "Fiction" },
+  { id: "2", name: "Non-Fiction" },
 ];
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Book Categories</Text>
@@ -17,7 +32,7 @@ const HomeScreen = ({ navigation }) => {
           <TouchableOpacity
             style={styles.item}
             onPress={() =>
-              navigation.navigate('Category', {
+              navigation.navigate("Category", {
                 categoryId: item.id,
                 categoryName: item.name,
               })
@@ -31,26 +46,5 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: '#f5f5f5',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-  },
-  item: {
-    padding: 16,
-    backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
-  },
-  itemText: {
-    fontSize: 18,
-  },
-});
 
 export default HomeScreen;
