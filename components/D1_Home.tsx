@@ -3,16 +3,16 @@ import { View, FlatList, Image, Text, TouchableOpacity, ActivityIndicator } from
 import { router } from 'expo-router';
 
 import styles from '@/styles/styles';
-import YccCatPromise from '@/paths/getYccCategories'; // Import the Promise
+import CatPromise from '@/paths/getCategories'; // Import the Promise
 
-interface YccCategory {
+interface Category {
     id: string;
     title: string;
     cover: string;
 }
 
 const YccGallery = () => {
-    const [yccCategories, setYccCategories] = useState<YccCategory[]>([]);
+    const [categories, setCategories] = useState<Category[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -20,8 +20,8 @@ const YccGallery = () => {
         // Fetch the YccCat data when the component mounts
         const fetchData = async () => {
             try {
-                const data = await YccCatPromise; // Wait for the Promise to resolve
-                setYccCategories(data); // Update state with the fetched data
+                const data = await CatPromise; // Wait for the Promise to resolve
+                setCategories(data); // Update state with the fetched data
             } catch (err) {
                 setError('Failed to load categories.'); // Handle errors
                 console.error(err);
@@ -33,14 +33,14 @@ const YccGallery = () => {
         fetchData();
     }, []);
 
-    const handleItemPress = (item: YccCategory) => {
+    const handleItemPress = (item: Category) => {
         router.push({
             pathname: '/ycc',
             params: { itemid: item.id },
         });
     };
 
-    const renderItem = ({ item }: { item: YccCategory }) => (
+    const renderItem = ({ item }: { item: Category }) => (
         <TouchableOpacity
             style={styles.galleryItemContainer}
             onPress={() => handleItemPress(item)}
@@ -72,7 +72,7 @@ const YccGallery = () => {
     return (
         <View style={styles.albumContainer}>
             <FlatList
-                data={yccCategories}
+                data={categories}
                 keyExtractor={(item) => item.id}
                 renderItem={renderItem}
                 numColumns={2}
