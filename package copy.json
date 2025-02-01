@@ -1,7 +1,7 @@
 {
     "name": "bookshub",
-    "main": "App.tsx",
-    "version": "1.0.20",
+    "main": "expo-router/entry",
+    "version": "1.0.0",
     "scripts": {
         "start": "expo start",
         "android": "expo start --android",
@@ -21,7 +21,6 @@
         "@react-navigation/bottom-tabs": "^7.2.0",
         "@react-navigation/drawer": "^7.1.1",
         "@react-navigation/native": "^7.0.14",
-        "@react-navigation/stack": "^7.1.1",
         "axios": "^1.7.9",
         "expo": "~52.0.28",
         "expo-blur": "~14.0.3",
