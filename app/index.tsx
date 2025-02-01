@@ -18,9 +18,9 @@ export default function MainPage() {
                 },
             }}
         >
-            <Drawer.Screen name="HomePage"   component={HomePage}   options={{ title: 'Online Books Hub' }} />
-            <Drawer.Screen name="Python" component={LocalGallery} options={{ title: 'Python' }} />
-            <Drawer.Screen name="Rate"         component={RateTheApp}   options={{ title: '5 star!' }} />
+            <Drawer.Screen name="HomePage" component={HomePage}   options={{ title: 'Online Books Hub' }} />
+            <Drawer.Screen name="Python"   component={LocalGallery} options={{ title: 'Python' }} />
+            <Drawer.Screen name="Rate"     component={RateTheApp}   options={{ title: '5 star!' }} />
         </Drawer.Navigator>
     );
 }

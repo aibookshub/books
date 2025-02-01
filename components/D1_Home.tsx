@@ -35,7 +35,7 @@ const YccGallery = () => {
 
     const handleItemPress = (item: Category) => {
         router.push({
-            pathname: '/ycc',
+            pathname: '/indexL2',
             params: { itemid: item.id },
         });
     };

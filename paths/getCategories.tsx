@@ -50,4 +50,5 @@ async function fetchCategories(): Promise<Category[]> {
 
 // Export the promise that resolves to categories
 const CategoriesPromise = fetchCategories();
+
 export default CategoriesPromise;
