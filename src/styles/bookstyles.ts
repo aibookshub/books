@@ -22,6 +22,54 @@ const styles = StyleSheet.create({
     itemText: {
         fontSize: 18,
     },
+    albumContainer: {
+        flex: 1,
+        margin: 5,
+        alignItems: 'center',
+        borderRadius: 10,
+        backgroundColor: '#fff',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 5,
+        elevation: 2,
+    },
+    albumCover: {
+        width: screenWidth * 0.44,
+        height: screenWidth * 0.45,
+        borderRadius: 10,
+    },
+    albumTitle: {
+        marginTop: 8,
+        fontSize: 14,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#333',
+    },
+    galleryGrid: {
+        justifyContent: 'space-between',
+        paddingBottom: 20,
+        paddingTop: 2,
+    },
+    galleryItemContainer: {
+        alignItems: 'center',
+        width: '50%',
+        aspectRatio: 9 / 16,
+        marginBottom: 10,
+    },
+    galleryItemImage: {
+        height: '88%',
+        width: '100%',
+        aspectRatio: 10 / 16,
+        borderRadius: 8,
+    },
+    galleryItemTitle: {
+        marginTop: 5,
+        fontSize: 14,
+        color: '#333',
+        textAlign: 'center',
+    },
+
 });
 
 export default styles;

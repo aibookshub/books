@@ -7,7 +7,7 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => (
     <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-        <Drawer.Screen name="Main" component={StackNavigator} />
+        <Drawer.Screen name="AI-Powered BooksHub" component={StackNavigator} />
     </Drawer.Navigator>
 );
 
