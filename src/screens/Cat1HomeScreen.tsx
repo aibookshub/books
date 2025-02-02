@@ -3,7 +3,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 
 import styles from "@/src/styles/bookstyles";
-import {cat1} from "@/src/config/booklist"
+import {cat1} from "@/src/config/catelist"
 
 import { HomeScreenProps } from "@/src/types";
 

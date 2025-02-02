@@ -3,7 +3,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
 import { Image, View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import styles   from "@/src/styles/bookstyles";
-import { cat2 } from "@/src/config/booklist"
+import { cat2 } from "@/src/config/catelist"
 
 type RootStackParamList = {
     Category: { categoryId: string; categoryName: string };
