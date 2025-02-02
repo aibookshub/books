@@ -5,15 +5,10 @@ import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 import styles from "@/src/styles/bookstyles";
 import {cat1} from "@/src/config/booklist"
 
-type RootStackParamList = {
-    Home: undefined;
-    Category: { categoryId: string; categoryName: string };
-};
+import { HomeScreenProps } from "@/src/types";
 
-type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, "Home">;
-type Props = { navigation: HomeScreenNavigationProp };
 
-const HomeScreen: React.FC<Props> = ({ navigation }) => {
+const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
     const renderItem = ({ item }: { item: (typeof cat1)[0] }) => (
         <TouchableOpacity
             style={styles.galleryItemContainer}
