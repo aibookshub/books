@@ -1,8 +1,10 @@
 import React from "react";
+import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
+
 import { createStackNavigator } from "@react-navigation/stack";
 
 import HomeScreen from "@/src/screens/Cat1HomeScreen";
-import CategoryScreen from "@/src/screens/Cat2SubScreen";
+import Cat2Screen from "@/src/screens/Cat2SubScreen";
 import BooksScreen from "@/src/screens/BooksScreen";
 import BookDetailScreen from "@/src/screens/BookDetailScreen";
 
@@ -10,10 +12,74 @@ const Stack = createStackNavigator();
 
 const StackNavigator = () => (
     <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Category" component={CategoryScreen} />
-        <Stack.Screen name="Books" component={BooksScreen} />
-        <Stack.Screen name="BookDetail" component={BookDetailScreen} />
+        <Stack.Screen name="Home" component={HomeScreen}
+            options={{
+                title: "Book Category",
+                headerShown: true,
+                headerStyle: { backgroundColor: "#f8f8f8" },
+                headerTintColor: "#333",
+                gestureEnabled: true,
+                headerRight: () => (<TouchableOpacity onPress={() => alert("Settings")}><Text></Text></TouchableOpacity>),
+            }}
+            initialParams={{ bookId: "001" }}
+            listeners={{
+                focus: () => console.log("BookDetail focused"),
+            }}
+        />
+
+        <Stack.Screen name="Category" component={Cat2Screen}
+            options={{
+                title: "Sub Category",
+                headerShown: true,
+                headerStyle: { backgroundColor: "#f8f8f8" },
+                headerTintColor: "#333",
+                gestureEnabled: true,
+                headerRight: () => (<TouchableOpacity onPress={() => alert("Settings")}><Text></Text></TouchableOpacity>),
+            }}
+            initialParams={{ bookId: "001" }}
+            listeners={{
+                focus: () => console.log("BookDetail focused"),
+            }}
+        />
+
+        <Stack.Screen name="Books" component={BooksScreen}
+            options={{
+                title: "Book List",
+                headerShown: true,
+                headerStyle: { backgroundColor: "#f8f8f8" },
+                headerTintColor: "#333",
+                gestureEnabled: true,
+                headerRight: () => (
+                    <TouchableOpacity onPress={() => alert("Settings")}>
+                        <Text>⚙️</Text>
+                    </TouchableOpacity>
+                ),
+            }}
+            initialParams={{ bookId: "001" }}
+            listeners={{
+                focus: () => console.log("BookDetail focused"),
+            }}
+        />
+
+
+        <Stack.Screen name="BookDetail" component={BookDetailScreen}
+            options={{
+                title: "Book Details",
+                headerShown: true,
+                headerStyle: { backgroundColor: "#f8f8f8" },
+                headerTintColor: "#333",
+                gestureEnabled: true,
+                headerRight: () => (
+                    <TouchableOpacity onPress={() => alert("Settings")}>
+                        <Text>⚙️</Text>
+                    </TouchableOpacity>
+                ),
+            }}
+            initialParams={{ bookId: "001" }}
+            listeners={{
+                focus: () => console.log("BookDetail focused"),
+            }}
+        />
     </Stack.Navigator>
 );
 

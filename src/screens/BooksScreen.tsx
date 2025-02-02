@@ -1,61 +1,49 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { NavigationProp, RouteProp } from "@react-navigation/native";
+import { booklist } from "@/src/config/booklist"
+import styles   from "@/src/styles/bookstyles";
 
-const BooksScreen = ({ route, navigation }) => {
-  const { subcategoryId } = route.params;
-
-  // Mock data for books
-  const books = [
-    { id: '1', title: 'Book 1', author: 'Author 1', introduction: 'This is the introduction for Book 1.' },
-    { id: '2', title: 'Book 2', author: 'Author 2', introduction: 'This is the introduction for Book 2.' },
-    { id: '3', title: 'Book 3', author: 'Author 3', introduction: 'This is the introduction for Book 3.' },
-  ];
-
-  return (
-    <View style={styles.container}>
-      {/* <Text style={styles.title}>Books in Subcategory {subcategoryId}</Text> */}
-      <FlatList
-        data={books}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.item}
-            onPress={() => navigation.navigate('BookDetail', { book: item })}
-          >
-            <Text style={styles.itemTitle}>{item.title}</Text>
-            <Text style={styles.itemAuthor}>{item.author}</Text>
-          </TouchableOpacity>
-        )}
-      />
-    </View>
-  );
+type RootStackParamList = {
+    Category: { subCateId: string; categoryName: string };
+    Books: { subCateId: string };
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: '#f5f5f5',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-  },
-  item: {
-    padding: 16,
-    backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
-  },
-  itemTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  itemAuthor: {
-    fontSize: 16,
-    color: '#666',
-  },
-});
+type SubcategoryScreenRouteProp = RouteProp<RootStackParamList, "Category">;
+
+interface Props {
+    navigation: NavigationProp<RootStackParamList, "Category">;
+    route: SubcategoryScreenRouteProp;
+}
+
+const BooksScreen = ({ route, navigation }: Props) => {
+    const { subCateId } = route.params;
+    console.log(subCateId);
+    
+    const filteredSubcategories = booklist.filter(
+        (booklist) => booklist.cat2Id === subCateId
+    );
+
+
+    return (
+        <View style={styles.container}>
+            {/* <Text style={styles.title}>Books in Subcategory {subcategoryId}</Text> */}
+            <FlatList
+                data={filteredSubcategories}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => (
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => navigation.navigate('BookDetail', { book: item })}
+                    >
+                        <Text style={styles.book_title}>{item.title}</Text>
+                        <Text style={styles.book_author}>{item.author}</Text>
+                    </TouchableOpacity>
+                )}
+            />
+        </View>
+    );
+};
+
 
 export default BooksScreen;
