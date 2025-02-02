@@ -13,7 +13,7 @@ const BooksScreen = ({ route, navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Books in Subcategory {subcategoryId}</Text>
+      {/* <Text style={styles.title}>Books in Subcategory {subcategoryId}</Text> */}
       <FlatList
         data={books}
         keyExtractor={(item) => item.id}

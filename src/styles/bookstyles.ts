@@ -65,11 +65,36 @@ const styles = StyleSheet.create({
     },
     galleryItemTitle: {
         marginTop: 5,
-        fontSize: 14,
+        fontSize: 16,
+        fontWeight: "600",
         color: '#333',
         textAlign: 'center',
     },
 
+    gridContainer: {
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    gridItem: {
+        flex: 1,
+        margin: 8,
+        padding: 16,
+        backgroundColor: "#f8f8f8",
+        borderRadius: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        shadowColor: "#000",
+        shadowOpacity: 0.2,
+        shadowOffset: { width: 2, height: 2 },
+        shadowRadius: 5,
+        elevation: 3,
+    },
+    categoryImage: {
+        width: 100,
+        height: 100,
+        borderRadius: 10,
+        marginBottom: 8,
+    },
 });
 
 export default styles;
