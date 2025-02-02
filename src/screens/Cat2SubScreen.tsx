@@ -3,6 +3,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
 import { Image, View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import styles from "@/src/styles/bookstyles";
+import {cat2} from "@/src/config/booklist"
 
 type RootStackParamList = {
     Category: { categoryId: string; categoryName: string };
@@ -20,27 +21,19 @@ interface Props {
 // Define Subcategory Type
 interface SubcategoryItem {
     id: string;
-    categoryId: string;
+    cat1ID: string;
     name: string;
     cover: string;
 }
 
 // Mock data for subcategories
-const subcategories = [
-    { id: "1", categoryId: "1", name: "Science Fiction", cover: "https://aidres.com/gallery/yangchenchen1/IMG_0527.JPG" },
-    { id: "2", categoryId: "1", name: "Fantasy", cover: "https://aidres.com/gallery/yangchenchen1/IMG_0527.JPG" },
-    { id: "3", categoryId: "1", name: "Mystery", cover: "https://aidres.com/gallery/yangchenchen1/IMG_0527.JPG" },
-    { id: "4", categoryId: "1", name: "Biography", cover: "https://aidres.com/gallery/yangchenchen1/IMG_0527.JPG" },
-    { id: "5", categoryId: "1", name: "History", cover: "https://aidres.com/gallery/yangchenchen1/IMG_0527.JPG" },
-    { id: "6", categoryId: "1", name: "Self-Help", cover: "https://aidres.com/gallery/yangchenchen1/IMG_0527.JPG" },
-];
 
-const CategoryScreen: React.FC<Props> = ({ route, navigation }) => {
+const CategoryScreen = ({ route, navigation }: Props) => {
     const { categoryId, categoryName } = route.params;
 
     // Filter subcategories based on the selected categoryId
-    const filteredSubcategories = subcategories.filter(
-        (sub) => sub.categoryId === categoryId
+    const filteredSubcategories = cat2.filter(
+        (sub) => sub.cat1ID === categoryId
     );
 
     const renderItem = ({ item }: { item: SubcategoryItem }) => (
@@ -55,7 +48,6 @@ const CategoryScreen: React.FC<Props> = ({ route, navigation }) => {
 
     return (
         <View style={styles.container}>
-            {/* <Text style={styles.title}>Subcategories</Text> */}
             <FlatList
                 data={filteredSubcategories}
                 keyExtractor={(item) => item.id}

@@ -95,6 +95,26 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginBottom: 8,
     },
+    book_container: {
+        flex: 1,
+        padding: 16,
+        backgroundColor: '#f5f5f5',
+    },
+    book_item: {
+        padding: 16,
+        backgroundColor: '#fff',
+        borderBottomWidth: 1,
+        borderBottomColor: '#ddd',
+    },
+    book_title: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    book_author: {
+        fontSize: 16,
+        color: '#666',
+    },
+
 });
 
 export default styles;
