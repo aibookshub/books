@@ -4,22 +4,19 @@ import { NavigationProp, RouteProp } from "@react-navigation/native";
 import { booklist } from "@/src/config/booklist"
 import styles   from "@/src/styles/bookstyles";
 
-type RootStackParamList = {
-    Category: { subCateId: string; categoryName: string };
-    Books: { subCateId: string };
+import { RootStackParamList } from "@/src/types"; // ✅ Ensure correct import
+
+type BooksScreenRouteProp = RouteProp<RootStackParamList, "Books">;
+type BooksScreenNavigationProp = NavigationProp<RootStackParamList, "Books">;
+
+type Props = {
+    route: BooksScreenRouteProp;
+    navigation: BooksScreenNavigationProp;
 };
 
-type SubcategoryScreenRouteProp = RouteProp<RootStackParamList, "Category">;
-
-interface Props {
-    navigation: NavigationProp<RootStackParamList, "Category">;
-    route: SubcategoryScreenRouteProp;
-}
-
-const BooksScreen = ({ route, navigation }: Props) => {
-    const { subCateId } = route.params;
-    console.log(subCateId);
-    
+const BooksScreen: React.FC<Props> = ({ route, navigation }) => {
+    const { subCateId, categoryName } = route.params;  // ✅ Extract params safely
+    console.log("Category Name:", categoryName);
     const filteredSubcategories = booklist.filter(
         (booklist) => booklist.cat2Id === subCateId
     );
