@@ -63,7 +63,7 @@ const StackNavigator = () => (
         <Stack.Screen name="BookDetail" component={BookDetailScreen}
             options={{
                 title: "Book Details",
-                headerShown: true,
+                headerShown: false,
                 headerStyle: { backgroundColor: "#f8f8f8" },
                 headerTintColor: "#333",
                 gestureEnabled: true,

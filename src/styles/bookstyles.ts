@@ -107,10 +107,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#f5f5f5',
     },
     book_item: {
-        padding: 16,
+        padding: 10,
         backgroundColor: '#fff',
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
+        flexDirection: 'row',  // ✅ Ensure row layout
+        flexShrink: 1,  // ✅ Prevent overflow
+        width: '100%',  // ✅ Ensure it doesn't exceed screen width
     },
     book_title: {
         fontSize: 18,
@@ -120,7 +123,12 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#666',
     },
-
+    book_summary: {
+        fontSize: 14,
+        color: '#444',
+        textAlign: 'left',  // ✅ Justifies text on Android
+        lineHeight: 20,  // ✅ Improves readability
+    },
 });
 
 export default styles;
