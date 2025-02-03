@@ -9,7 +9,7 @@ const BooksScreen: React.FC<BooklistProps> = ({ route, navigation }) => {
     const { subCateId, categoryName } = route.params;  // ✅ Extract params safely
     console.log("Category Name:", categoryName);
     const filteredSubcategories = booklist.filter(
-        (booklist) => booklist.cat2Id === subCateId
+        (booklist) => booklist.id.startsWith(subCateId)        
     );
 
     return (
@@ -21,7 +21,6 @@ const BooksScreen: React.FC<BooklistProps> = ({ route, navigation }) => {
                     <TouchableOpacity
                         style={styles.item}
                         onPress={() => navigation.navigate('BookDetail', { book: item })}
-                        
                     >
                         <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
                             <Image source={require('@/assets/images/icon.png')} style={styles.bookImage} />

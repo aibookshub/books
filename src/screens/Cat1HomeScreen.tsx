@@ -7,7 +7,6 @@ import {cat1} from "@/src/config/catelist"
 
 import { HomeScreenProps } from "@/src/types";
 
-
 const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
     const renderItem = ({ item }: { item: (typeof cat1)[0] }) => (
         <TouchableOpacity
@@ -19,8 +18,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
                 })
             }
         >
-            {/* <Image source={{ uri: item.cover }} style={styles.galleryItemImage} /> */}
-            <Image source={require('@/assets/images/icon.png')} style={styles.galleryItemImage} />
+            <Image source={{ uri: item.cover }} style={styles.galleryItemImage} />
             <Text style={styles.galleryItemTitle}>{item.name}</Text>
         </TouchableOpacity>
     );

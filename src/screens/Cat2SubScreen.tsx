@@ -8,9 +8,8 @@ import { SubCateProps, SubCateItem } from "@/src/types";
 const SubcategoryScreen: React.FC<SubCateProps> = ({ navigation, route }) => {
     const { categoryId, categoryName } = route.params;
 
-    // Filter subcategories based on the selected categoryId
     const filteredSubcategories = cat2.filter(
-        (sub) => sub.cat1Id === categoryId
+        (sub) => sub.id.startsWith(categoryId)
     );
 
     const renderItem = ({ item }: { item: SubCateItem }) => (
