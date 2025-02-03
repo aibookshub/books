@@ -31,7 +31,6 @@ export interface SubCateProps {
     route: SubcategoryScreenRouteProp;
 }
 
-// Define Subcategory Type
 export interface SubCateItem {
     id: string;
     cat1Id: string;
@@ -39,4 +38,11 @@ export interface SubCateItem {
     cover: string;
 }
 
+// booklist
+type BooklistRouteProp = RouteProp<RootStackParamList, "Books">;
+type BooklistNavigationProp = NavigationProp<RootStackParamList, "Books">;
 
+export type BooklistProps = {
+    route: BooklistRouteProp;
+    navigation: BooklistNavigationProp;
+};

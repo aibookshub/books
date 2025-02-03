@@ -51,7 +51,7 @@ const StackNavigator = () => (
                 gestureEnabled: true,
                 headerRight: () => (
                     <TouchableOpacity onPress={() => alert("Settings")}>
-                        <Text>⚙️</Text>
+                        <Text></Text>
                     </TouchableOpacity>
                 ),
             })}

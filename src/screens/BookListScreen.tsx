@@ -1,30 +1,19 @@
 import React from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import { NavigationProp, RouteProp } from "@react-navigation/native";
+import styles from "@/src/styles/bookstyles";
+import { Image, View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+
 import { booklist } from "@/src/config/booklist"
-import styles   from "@/src/styles/bookstyles";
+import { BooklistProps } from "@/src/types";
 
-import { RootStackParamList } from "@/src/types"; // ✅ Ensure correct import
-
-type BooksScreenRouteProp = RouteProp<RootStackParamList, "Books">;
-type BooksScreenNavigationProp = NavigationProp<RootStackParamList, "Books">;
-
-type Props = {
-    route: BooksScreenRouteProp;
-    navigation: BooksScreenNavigationProp;
-};
-
-const BooksScreen: React.FC<Props> = ({ route, navigation }) => {
+const BooksScreen: React.FC<BooklistProps> = ({ route, navigation }) => {
     const { subCateId, categoryName } = route.params;  // ✅ Extract params safely
     console.log("Category Name:", categoryName);
     const filteredSubcategories = booklist.filter(
         (booklist) => booklist.cat2Id === subCateId
     );
 
-
     return (
         <View style={styles.container}>
-            {/* <Text style={styles.title}>Books in Subcategory {subcategoryId}</Text> */}
             <FlatList
                 data={filteredSubcategories}
                 keyExtractor={(item) => item.id}
@@ -33,8 +22,15 @@ const BooksScreen: React.FC<Props> = ({ route, navigation }) => {
                         style={styles.item}
                         onPress={() => navigation.navigate('BookDetail', { book: item })}
                     >
-                        <Text style={styles.book_title}>{item.title}</Text>
-                        <Text style={styles.book_author}>{item.author}</Text>
+                        <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+                            <Image source={require('@/assets/images/icon.png')} style={styles.bookImage} />
+                            <View style={{ marginLeft: 15, alignSelf: 'flex-start' }}>
+                                <Text style={styles.book_title}>{item.title}</Text>
+                                <Text style={styles.book_author}>{item.author}</Text>
+                            </View>
+                        </View>
+
+
                     </TouchableOpacity>
                 )}
             />

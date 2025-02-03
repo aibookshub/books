@@ -5,7 +5,7 @@ const screenWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 16,
+        padding: 6,
         backgroundColor: '#f5f5f5',
     },
     title: {
@@ -94,6 +94,12 @@ const styles = StyleSheet.create({
         height: 100,
         borderRadius: 10,
         marginBottom: 8,
+    },
+    bookImage: {
+        width: 100,
+        height: 100,
+        borderRadius: 7,
+        marginBottom: 0,
     },
     book_container: {
         flex: 1,
