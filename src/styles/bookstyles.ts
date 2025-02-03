@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 6,
-        backgroundColor: '#f5f5f5',
+        // backgroundColor: '#f5f5f5',
+        backgroundColor: "transparent",
     },
     title: {
         fontSize: 24,
@@ -129,6 +130,34 @@ const styles = StyleSheet.create({
         textAlign: 'left',  // ✅ Justifies text on Android
         lineHeight: 20,  // ✅ Improves readability
     },
+    pdf_container: {
+        flex: 1,
+        justifyContent: 'flex-start',        
+        alignItems: 'center',
+        marginTop: 2,
+        position: "relative",  // Ensure stacking behavior works
+        zIndex: 1,
+    },
+    loaderContainer: {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: [{ translateX: -50 }, { translateY: -50 }],
+        backgroundColor: "rgba(255,255,255,0.8)",
+        padding: 10,
+        borderRadius: 10,
+    },
+    progressText: {
+        marginTop: 10,
+        fontSize: 16,
+        color: "#333",
+    },
+    pdf_content: {
+        flex: 1,
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
+    }
+
 });
 
 export default styles;

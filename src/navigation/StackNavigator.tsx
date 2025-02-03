@@ -61,18 +61,10 @@ const StackNavigator = () => (
         />
 
         <Stack.Screen name="BookDetail" component={BookDetailScreen}
-            options={{
-                title: "Book Details",
-                headerShown: false,
-                headerStyle: { backgroundColor: "#f8f8f8" },
-                headerTintColor: "#333",
-                gestureEnabled: true,
-                headerRight: () => (
-                    <TouchableOpacity onPress={() => alert("Settings")}>
-                        <Text>⚙️</Text>
-                    </TouchableOpacity>
-                ),
-            }}
+            options={({ route }) => ({
+                title: route.params?.categoryName || "Book Details",
+                headerShown: true,
+            })}
             listeners={{
                 focus: () => console.log("BookDetail focused"),
             }}

@@ -1,18 +1,48 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+// trustAllCerts={false}
+
+import { StatusBar, SafeAreaView, useWindowDimensions, ActivityIndicator, Text } from "react-native";
+import PDF from "react-native-pdf";
+import 'expo-dev-client';
+import React, { useState } from "react";
+import { StyleSheet, Dimensions, View } from 'react-native';
 import styles from "@/src/styles/bookstyles";
+import { ProgressBar } from "react-native-paper";
 
-const BookDetailScreen = ({ route }) => {
-  const { book } = route.params;
-
-  return (
-    <ScrollView style={styles.book_container}>
-      <Text style={styles.title}>{book.title}</Text>
-      <Text style={styles.book_author}>By {book.author}</Text>
-      <Text style={styles.book_summary}>{book.summary}</Text>
-    </ScrollView>
-  );
+const source = {
+    uri: "https://bbarrettchs.weebly.com/uploads/3/7/7/8/37782575/lvp_java_text.pdf",
+    cache: true,
 };
 
+function RateTheApp() {
+    const { width, height } = useWindowDimensions();
+    const [isLoading, setIsLoading] = React.useState(true);
+    const [progress, setProgress] = React.useState(0);
 
-export default BookDetailScreen;
+    return (
+        <View style={styles.pdf_container}>
+            <ProgressBar progress={progress} color="#0000ff" />
+            <PDF
+                trustAllCerts={false}
+                source={source}
+                onLoadProgress={(percent) => {
+                    setProgress(percent / 100); // Convert percent to a fraction
+                }}
+                onLoadComplete={(numberOfPages, filePath) => {
+                    console.log(`Number of pages: ${numberOfPages}`);
+                }}
+                onPageChanged={(page, numberOfPages) => {
+                    console.log(`Current page: ${page}`);
+                }}
+                onError={(error) => {
+                    console.log(error);
+                }}
+                onPressLink={(uri) => {
+                    console.log(`Link pressed: ${uri}`);
+                }}
+                style={styles.pdf_content}
+            />
+        </View>
+    );
+}
+
+export default RateTheApp;
