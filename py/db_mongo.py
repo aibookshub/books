@@ -1,4 +1,4 @@
-import os, requests, pymongo
+import os, requests, pymongo,json, sys
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -53,32 +53,40 @@ def save_to_mongodb(book_data):
 
 
 
-def save_books_to_txt(file_path="books.txt"):
+def save_books_to_txt(file_path="booklist.js"):
     """Retrieve books from MongoDB and save them to a .txt file in the given format."""
     books = collection.find()
     
+    booklist = []
+    for book in books:
+        book_entry = {
+            "id": book.get("bid", "Unknown ID"),
+            "name": book.get("title", "Unknown Title"),
+            "cover": book.get("imageLinks", {}).get("smallThumbnail", "No cover available"),
+            "title": book.get("title", "Unknown Title"),
+            "author": book.get("authors", ["Unknown Author"])[0],
+            "summary": book.get("description", "No summary available"),
+            "previewLink": book.get("previewLink", "No preview link"),
+        }
+        booklist.append(book_entry)
+
+    # Write the list to a .js file in the required format
     with open(file_path, "w", encoding="utf-8") as f:
-        for book in books:
-            book_id = book.get("bid", "Unknown ID")
-            title = book.get("title", "Unknown Title")
-            cover = book.get("imageLinks", {}).get("smallThumbnail", "No cover available")
-            author = book.get("authors", ["Unknown Author"])[0]
-            summary = book.get("description", "No summary available")
-            preview_link = book.get("previewLink", "No preview link")
-
-            # Formatting the output
-            book_entry = (
-                f'id: "{book_id}", Title: "{title}", cover: "{cover}", '
-                f'author: "{author}", summary: "{summary}", previewLink: "{preview_link}"\n\n'
-            )
-
-            f.write(book_entry)
+        f.write("export const booklist = ")
+        json.dump(booklist, f, indent=4, ensure_ascii=False)
 
     print(f"Book list saved to {file_path}")
 
 if __name__ == "__main__":
-    save_books_to_txt()
+    if len(sys.argv) > 1 and sys.argv[1].lower() == "t":
+            save_books_to_txt()
+    else:
+        with open("titles.json", "r", encoding="utf-8") as file:
+            book_titles = json.load(file)
 
+        for title in book_titles:
+            metadata = fetch_book_metadata(title)
+            save_to_mongodb(metadata)
 
 # if __name__ == "__main__":
 #     book_title = input("Enter book title: ")
