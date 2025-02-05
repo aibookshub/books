@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     galleryItemImage: {
-        height: '88%',
+        height: '85%',
         width: '100%',
         aspectRatio: 10 / 16,
         borderRadius: 8,
