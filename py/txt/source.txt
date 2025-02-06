@@ -1,0 +1,10 @@
+《2. 实战深度学习算法：零起点通关神经网络模型（基于Python和NumPy实现）》.pdf
+《深入浅出深度学习：原理剖析与Python实践》.pdf
+《深度学习入门：基于Python的理论与实现》高清中文版.pdf
+《深度学习：基于Keras的Python实践》2018.pdf
+深度学习与R语言.pdf
+深度学习之PyTorch实战计算机视觉》.pdf
+深度学习入门：基于Python的理论与实现.pdf
+深度学习：主流框架和编程实战.html.pdf
+深度学习：方法及应用.pdf
+深度学习：核心技术、工具与案例解析.html.pdf
