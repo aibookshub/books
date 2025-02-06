@@ -6,13 +6,14 @@ export type RootStackParamList = {
     Category: { categoryId: string; categoryName: string };
     Books: { subCateId: string; categoryName: string };
     BookDetail: { book: { 
-        id: string; 
-        cat1Id: string; 
-        cat2Id: string; 
-        name: string; 
-        cover: string; 
-        title: string; 
-        author: string; 
+        id: string;  
+        title: string;  // ✅ Replace `name` with `title`
+        cover: string;  
+        author: string;  
+        publisher: string;  
+        summary: string;  
+        previewLink: string;  
+        isbn_13: string;  
     }};
 };
 

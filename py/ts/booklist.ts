@@ -1,6 +1,6 @@
 export const booklist = [
     {
-        "bid": "110003",
+        "id": "120003",
         "title": "Python机器__及__——_零_始通往Kaggle__之路",
         "cover": "http://books.google.com/books/content?id=wNeJDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清華大學出版社 崧博出版",
@@ -10,7 +10,7 @@ export const booklist = [
         "isbn_13": "9787302442875"
     },
     {
-        "bid": "110004",
+        "id": "120004",
         "title": "R深度学习权威指南",
         "cover": "http://books.google.com/books/content?id=c_wJEQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Packt Publishing Ltd",
@@ -20,7 +20,7 @@ export const booklist = [
         "isbn_13": "9781836204107"
     },
     {
-        "bid": "110005",
+        "id": "120005",
         "title": "深度学习实践：计算机视觉",
         "cover": "http://books.google.com/books/content?id=gUFgEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清华大学出版社（崧博）",
@@ -30,7 +30,7 @@ export const booklist = [
         "isbn_13": "9787302517900"
     },
     {
-        "bid": "110006",
+        "id": "120006",
         "title": "深度学习实战",
         "cover": "http://books.google.com/books/content?id=Vyb7DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清华大学出版社（崧博）",
@@ -40,7 +40,7 @@ export const booklist = [
         "isbn_13": "9787302491026"
     },
     {
-        "bid": "110007",
+        "id": "120007",
         "title": "人工智能与教育",
         "cover": "http://books.google.com/books/content?id=pvBMEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "UNESCO Publishing",
@@ -50,7 +50,7 @@ export const booklist = [
         "isbn_13": "9789235000399"
     },
     {
-        "bid": "110008",
+        "id": "120008",
         "title": "深度学习实战",
         "cover": "http://books.google.com/books/content?id=Vyb7DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清华大学出版社（崧博）",
@@ -60,7 +60,7 @@ export const booklist = [
         "isbn_13": "9787302491026"
     },
     {
-        "bid": "110009",
+        "id": "120009",
         "title": "人工智能与教育",
         "cover": "http://books.google.com/books/content?id=pvBMEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "UNESCO Publishing",

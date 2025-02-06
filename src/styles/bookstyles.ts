@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     },
     bookImage: {
         width: 100,
-        height: 100,
+        height: 150,
         borderRadius: 7,
         marginBottom: 0,
     },
