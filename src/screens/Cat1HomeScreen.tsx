@@ -13,7 +13,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
             style={styles.galleryItemContainer}
             onPress={() =>
                 navigation.navigate("Category", {
-                    categoryId: item.id,
+                    categoryId:   item.id,
                     categoryName: item.name,
                 })
             }
