@@ -1,5 +1,7 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import { NavigationProp, RouteProp } from "@react-navigation/native";
+import { DrawerNavigationProp } from '@react-navigation/drawer';
+
 
 export type RootStackParamList = {
     Home: undefined;
@@ -22,6 +24,12 @@ export type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, "
 export interface HomeScreenProps {
     navigation: HomeScreenNavigationProp;
 }
+
+// Drawer
+export interface DrawerProps {
+    navigation: DrawerNavigationProp<any>;
+}
+
 
 // SubCategory
 type SubcategoryScreenNavigationProp = StackNavigationProp<RootStackParamList, "Category">;
