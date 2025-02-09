@@ -1,5 +1,5 @@
 import React from 'react';
-import AppNavigator from '@/src/navigation/AppNavigator'; // Adjust the path as needed
+import AppNavigator from '@/src/navigation/AppNavigator'; 
 import { registerRootComponent } from 'expo';
 
 function App() {

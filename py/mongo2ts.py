@@ -14,14 +14,14 @@ def get_isbn_13(book):
     return "No ISBN_13 available"
 
 
-def save_books_to_txt(file_path="./ts/booklist.ts"):
+def save_books_to_txt(file_path="./ts/booklist_temp.ts"):
     """Retrieve books from MongoDB and save them to a .txt file in the given format."""
     books = collection.find()
     
     booklist = []
     for book in books:
         book_entry = {
-            "bid":   book.get("bid", "Unknown ID"),
+            "id":   book.get("bid", "Unknown ID"),
             "title": book.get("title", "Unknown Title"),
             "cover": book.get("imageLinks", {}).get("smallThumbnail", "No cover available"),
             "publisher": book.get("publisher", "Unknown publisher"),

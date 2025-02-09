@@ -62,7 +62,7 @@ const StackNavigator = () => (
 
         <Stack.Screen name="BookDetail" component={BookDetailScreen}
             options={({ route }) => ({
-                title: route.params?.categoryName || "Book Details",
+                title: route.params?.book.title || "Book Details",
                 headerShown: true,
             })}
             listeners={{

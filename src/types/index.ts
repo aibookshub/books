@@ -34,7 +34,6 @@ export interface SubCateProps {
 
 export interface SubCateItem {
     id: string;
-    cat1Id: string;
     name: string;
     cover: string;
 }

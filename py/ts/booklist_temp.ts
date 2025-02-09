@@ -1,6 +1,26 @@
 export const booklist = [
     {
-        "id": "240003",
+        "id": "110001",
+        "title": "Deep Learning By Example",
+        "cover": "http://books.google.com/books/content?id=oulODwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "publisher": "Packt Publishing Ltd",
+        "author": "Ahmed Menshawy",
+        "summary": "Grasp the fundamental concepts of deep learning using Tensorflow in a hands-on manner Key Features Get a first-hand experience of the deep learning concepts and techniques with this easy-to-follow guide Train different types of neural networks using Tensorflow for real-world problems in language processing, computer vision, transfer learning, and more Designed for those who believe in the concept of 'learn by doing', this book is a perfect blend of theory and code examples Book Description Deep learning is a popular subset of machine learning, and it allows you to build complex models that are faster and give more accurate predictions. This book is your companion to take your first steps into the world of deep learning, with hands-on examples to boost your understanding of the topic. This book starts with a quick overview of the essential concepts of data science and machine learning which are required to get started with deep learning. It introduces you to Tensorflow, the most widely ",
+        "previewLink": "http://books.google.ca/books?id=oulODwAAQBAJ&printsec=frontcover&dq=%E3%80%8A2.+%E5%AE%9E%E6%88%98%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%EF%BC%9A%E9%9B%B6%E8%B5%B7%E7%82%B9%E9%80%9A%E5%85%B3%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%EF%BC%88%E5%9F%BA%E4%BA%8EPython%E5%92%8CNumPy%E5%AE%9E%E7%8E%B0%EF%BC%89%E3%80%8B.pdf&hl=&cd=1&source=gbs_api",
+        "isbn_13": "9781788395762"
+    },
+    {
+        "id": "110002",
+        "title": "Deep Learning By Example",
+        "cover": "http://books.google.com/books/content?id=oulODwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "publisher": "Packt Publishing Ltd",
+        "author": "Ahmed Menshawy",
+        "summary": "Grasp the fundamental concepts of deep learning using Tensorflow in a hands-on manner Key Features Get a first-hand experience of the deep learning concepts and techniques with this easy-to-follow guide Train different types of neural networks using Tensorflow for real-world problems in language processing, computer vision, transfer learning, and more Designed for those who believe in the concept of 'learn by doing', this book is a perfect blend of theory and code examples Book Description Deep learning is a popular subset of machine learning, and it allows you to build complex models that are faster and give more accurate predictions. This book is your companion to take your first steps into the world of deep learning, with hands-on examples to boost your understanding of the topic. This book starts with a quick overview of the essential concepts of data science and machine learning which are required to get started with deep learning. It introduces you to Tensorflow, the most widely ",
+        "previewLink": "http://books.google.ca/books?id=oulODwAAQBAJ&printsec=frontcover&dq=%E3%80%8A%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E5%8E%9F%E7%90%86%E5%89%96%E6%9E%90%E4%B8%8EPython%E5%AE%9E%E8%B7%B5%E3%80%8B.pdf&hl=&cd=1&source=gbs_api",
+        "isbn_13": "9781788395762"
+    },
+    {
+        "id": "110003",
         "title": "Python机器__及__——_零_始通往Kaggle__之路",
         "cover": "http://books.google.com/books/content?id=wNeJDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清華大學出版社 崧博出版",
@@ -10,7 +30,7 @@ export const booklist = [
         "isbn_13": "9787302442875"
     },
     {
-        "id": "240004",
+        "id": "110004",
         "title": "R深度学习权威指南",
         "cover": "http://books.google.com/books/content?id=c_wJEQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Packt Publishing Ltd",
@@ -20,7 +40,7 @@ export const booklist = [
         "isbn_13": "9781836204107"
     },
     {
-        "id": "240005",
+        "id": "110005",
         "title": "深度学习实践：计算机视觉",
         "cover": "http://books.google.com/books/content?id=gUFgEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清华大学出版社（崧博）",
@@ -30,7 +50,7 @@ export const booklist = [
         "isbn_13": "9787302517900"
     },
     {
-        "id": "240006",
+        "id": "110006",
         "title": "深度学习实战",
         "cover": "http://books.google.com/books/content?id=Vyb7DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清华大学出版社（崧博）",
@@ -40,7 +60,7 @@ export const booklist = [
         "isbn_13": "9787302491026"
     },
     {
-        "id": "240007",
+        "id": "110007",
         "title": "人工智能与教育",
         "cover": "http://books.google.com/books/content?id=pvBMEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "UNESCO Publishing",
@@ -50,7 +70,7 @@ export const booklist = [
         "isbn_13": "9789235000399"
     },
     {
-        "id": "240008",
+        "id": "110008",
         "title": "深度学习实战",
         "cover": "http://books.google.com/books/content?id=Vyb7DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清华大学出版社（崧博）",
@@ -60,7 +80,7 @@ export const booklist = [
         "isbn_13": "9787302491026"
     },
     {
-        "id": "240009",
+        "id": "110009",
         "title": "人工智能与教育",
         "cover": "http://books.google.com/books/content?id=pvBMEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "UNESCO Publishing",
@@ -70,7 +90,17 @@ export const booklist = [
         "isbn_13": "9789235000399"
     },
     {
-        "id": "220011",
+        "id": "110010",
+        "title": "Missing Time",
+        "cover": "http://books.google.com/books/content?id=sHJbzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "publisher": "August Night Press",
+        "author": "Budd Hopkins",
+        "summary": "Originally published in 1981, this pioneering work by Budd Hopkins was the first focused study of an enigma that would come to captivate the world and challenge our understanding of the universe. The influence of Missing Time was such that its title is now deeply embedded into the lexicon of UFO studies-synonymous with that most controversial and troubling of topics: alien abduction. At the time of its writing, Hopkins could not have predicted the impact of Missing Time, not only within UFOlogy, but in popular culture worldwide. The facts, stories, and theories presented herein laid the foundation for the first mainstream debates surrounding reports of human encounters with small, grey-skinned entities-non-human beings with hypnotic black eyes who came silently in the night for their own mysterious purposes. These vivid descriptions as documented by Hopkins would trigger buried memories worldwide in people from all walks of life-to the extent that the so-called \"Greys\" now represent th",
+        "previewLink": "http://books.google.ca/books?id=sHJbzgEACAAJ&dq=Beginning_ChatGPT_for_Python_Build_Intelligent_Applications.pdf&hl=&cd=1&source=gbs_api",
+        "isbn_13": "9781786771513"
+    },
+    {
+        "id": "110011",
         "title": "Generative AI for Cloud Solutions",
         "cover": "http://books.google.com/books/content?id=8doBEQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Packt Publishing Ltd",
@@ -80,7 +110,7 @@ export const booklist = [
         "isbn_13": "9781835080160"
     },
     {
-        "id": "220012",
+        "id": "110012",
         "title": "LLM大型語言模型的絕世祕笈：27路獨步劍法，帶你闖蕩生成式AI的五湖四海（iThome鐵人賽系列書）",
         "cover": "http://books.google.com/books/content?id=2mIrEQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "博碩文化",
@@ -90,7 +120,7 @@ export const booklist = [
         "isbn_13": "9786263339293"
     },
     {
-        "id": "260013",
+        "id": "110013",
         "title": "Machine Learning Mastery With Python",
         "cover": "http://books.google.com/books/content?id=BgmqDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Machine Learning Mastery",
@@ -100,7 +130,7 @@ export const booklist = [
         "isbn_13": "No ISBN_13 available"
     },
     {
-        "id": "260014",
+        "id": "110014",
         "title": "Machine Learning Algorithms From Scratch with Python",
         "cover": "http://books.google.com/books/content?id=5giqDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Machine Learning Mastery",
@@ -110,7 +140,7 @@ export const booklist = [
         "isbn_13": "No ISBN_13 available"
     },
     {
-        "id": "260015",
+        "id": "110015",
         "title": "Machine Learning Mastery With Python",
         "cover": "http://books.google.com/books/content?id=BgmqDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Machine Learning Mastery",
@@ -120,7 +150,7 @@ export const booklist = [
         "isbn_13": "No ISBN_13 available"
     },
     {
-        "id": "260016",
+        "id": "110016",
         "title": "Python Machine Learning Projects",
         "cover": "http://books.google.com/books/content?id=YU2eDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "DigitalOcean",
@@ -130,7 +160,7 @@ export const booklist = [
         "isbn_13": "9780999773024"
     },
     {
-        "id": "260017",
+        "id": "110017",
         "title": "Master Machine Learning Algorithms",
         "cover": "http://books.google.com/books/content?id=n--oDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Machine Learning Mastery",
@@ -140,7 +170,7 @@ export const booklist = [
         "isbn_13": "No ISBN_13 available"
     },
     {
-        "id": "260018",
+        "id": "110018",
         "title": "Dive Into Deep Learning",
         "cover": "http://books.google.com/books/content?id=eaCgDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Corwin Press",
@@ -150,7 +180,7 @@ export const booklist = [
         "isbn_13": "9781544385402"
     },
     {
-        "id": "260019",
+        "id": "110019",
         "title": "Python for Finance",
         "cover": "http://books.google.com/books/content?id=3Kd9DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "\"O'Reilly Media, Inc.\"",
@@ -160,7 +190,7 @@ export const booklist = [
         "isbn_13": "9781492024293"
     },
     {
-        "id": "260020",
+        "id": "110020",
         "title": "Understanding Machine Learning",
         "cover": "http://books.google.com/books/content?id=ttJkAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "Cambridge University Press",
@@ -170,7 +200,7 @@ export const booklist = [
         "isbn_13": "9781107057135"
     },
     {
-        "id": "280021",
+        "id": "110021",
         "title": "人工神经网络原理及应用",
         "cover": "No cover available",
         "publisher": "Unknown publisher",
@@ -180,7 +210,7 @@ export const booklist = [
         "isbn_13": "9787030165701"
     },
     {
-        "id": "280022",
+        "id": "110022",
         "title": "智能控制导论",
         "cover": "No cover available",
         "publisher": "Unknown publisher",
@@ -190,7 +220,7 @@ export const booklist = [
         "isbn_13": "9787517076261"
     },
     {
-        "id": "280023",
+        "id": "110023",
         "title": "人工神经网络原理及应用",
         "cover": "No cover available",
         "publisher": "Unknown publisher",
@@ -200,7 +230,7 @@ export const booklist = [
         "isbn_13": "9787030165701"
     },
     {
-        "id": "280024",
+        "id": "110024",
         "title": "人工神经网络与模拟进化计算",
         "cover": "http://books.google.com/books/content?id=u-IPkbbG_iEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清华大学出版社有限公司",
@@ -210,7 +240,7 @@ export const booklist = [
         "isbn_13": "9787302106630"
     },
     {
-        "id": "280025",
+        "id": "110025",
         "title": "智能运维技术及应用",
         "cover": "http://books.google.com/books/content?id=Bx2sEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清华大学出版社",
@@ -220,7 +250,7 @@ export const booklist = [
         "isbn_13": "9787302594741"
     },
     {
-        "id": "280026",
+        "id": "110026",
         "title": "人工神经网络原理及应用",
         "cover": "No cover available",
         "publisher": "Unknown publisher",
@@ -230,7 +260,7 @@ export const booklist = [
         "isbn_13": "9787030165701"
     },
     {
-        "id": "280027",
+        "id": "110027",
         "title": "人工神经网络原理及应用",
         "cover": "No cover available",
         "publisher": "Unknown publisher",
@@ -240,7 +270,7 @@ export const booklist = [
         "isbn_13": "9787030165701"
     },
     {
-        "id": "280028",
+        "id": "110028",
         "title": "元宇宙漫游指南",
         "cover": "http://books.google.com/books/content?id=kCLXEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "上海人民出版社有限责任公司",
@@ -250,7 +280,7 @@ export const booklist = [
         "isbn_13": "9787208176461"
     },
     {
-        "id": "280029",
+        "id": "110029",
         "title": "策略定量研究基礎——預測與決策",
         "cover": "http://books.google.com/books/content?id=TXbhDgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "清華大學出版社",
@@ -260,7 +290,7 @@ export const booklist = [
         "isbn_13": "9787302238416"
     },
     {
-        "id": "280030",
+        "id": "110030",
         "title": "智能控制导论",
         "cover": "No cover available",
         "publisher": "Unknown publisher",
@@ -270,7 +300,7 @@ export const booklist = [
         "isbn_13": "9787517076261"
     },
     {
-        "id": "280031",
+        "id": "110031",
         "title": "Zhejiang daxue xuebao",
         "cover": "http://books.google.com/books/content?id=SykSAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
         "publisher": "Unknown publisher",
@@ -280,7 +310,7 @@ export const booklist = [
         "isbn_13": "No ISBN_13 available"
     },
     {
-        "id": "280032",
+        "id": "110032",
         "title": "人工智能与教育",
         "cover": "http://books.google.com/books/content?id=pvBMEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "publisher": "UNESCO Publishing",
@@ -290,7 +320,7 @@ export const booklist = [
         "isbn_13": "9789235000399"
     },
     {
-        "id": "280033",
+        "id": "110033",
         "title": "人工神经网络原理及应用",
         "cover": "No cover available",
         "publisher": "Unknown publisher",

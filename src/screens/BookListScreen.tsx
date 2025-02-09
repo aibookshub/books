@@ -8,7 +8,7 @@ import { BooklistProps } from "@/src/types";
 
 const BooksScreen: React.FC<BooklistProps> = ({ route, navigation }) => {
     const { subCateId, categoryName } = route.params;  // ✅ Extract params safely
-    console.log("Category Name:", categoryName);
+    console.log("------------>subCateId:", subCateId);
     const filteredSubcategories = booklist.filter(
         (booklist) => booklist.id.startsWith(subCateId)        
     );

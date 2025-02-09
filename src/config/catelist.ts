@@ -8,7 +8,7 @@ export const cat1 = [
 ];
 
 export const cat2 = [
-    { id: "22", name: "ChatGPT & LLM",      cover: `${UL}ai_dl.jpg`},
+    { id: "22", name: "ChatGPT & LLM",      cover: `${UL}ai_llm.jpg`},
     { id: "24", name: "Deep Learning",      cover: `${UL}ai_dl.jpg`},
     { id: "26", name: "Machine Learning",   cover: `${UL}ai_ml.jpg`},
     { id: "28", name: "Nerual Network",     cover: `${UL}ai_nn.jpg`},
