@@ -4,9 +4,9 @@ import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { RootStackParamList } from "@/src/types"; 
 
-import HomeScreen from "@/src/screens/Cat1HomeScreen";
-import Cat2Screen from "@/src/screens/Cat2SubScreen";
-import BooksScreen from "@/src/screens/BookListScreen";
+import Cat1HomeScreen from "@/src/screens/Cat1HomeScreen";
+import Cat2SubScreen from "@/src/screens/Cat2SubScreen";
+import BookListScreen from "@/src/screens/BookListScreen";
 import BookDetailScreen from "@/src/screens/BookDetailScreen";
 
 // const Stack = createStackNavigator();
@@ -14,7 +14,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 const StackNavigator = () => (
     <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen}
+        <Stack.Screen name="Home" component={Cat1HomeScreen}
             options={{
                 title: "Book Category",
                 headerShown: false,
@@ -28,7 +28,7 @@ const StackNavigator = () => (
             }}
         />
 
-        <Stack.Screen name="Category" component={Cat2Screen}
+        <Stack.Screen name="Category" component={Cat2SubScreen}
             options={({ route }) => ({
                 title: route.params?.categoryName || "Category",
                 headerShown: true,
@@ -42,7 +42,7 @@ const StackNavigator = () => (
             }}
         />
 
-        <Stack.Screen   name="Books"    component={BooksScreen}
+        <Stack.Screen   name="Books"    component={BookListScreen}
             options={({ route }) => ({
                 title: route.params?.categoryName || "Book 2 List",
                 headerShown: true,

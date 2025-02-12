@@ -2,7 +2,7 @@
 
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import CustomDrawerContent from "@/src/components/CustomDrawerContent";
+import CustomDrawerContent from "@/src/navigation/DrawerContent";
 import StackNavigator from "./StackNavigator";
 
 const Drawer = createDrawerNavigator();
